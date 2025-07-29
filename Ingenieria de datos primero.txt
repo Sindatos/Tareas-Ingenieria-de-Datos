@@ -1,0 +1,29 @@
+ETL:
+Por sus siglas en ingles significa: E Extract, T Transform, L Load
+Se trata de un proceso utilizado en ingenieria de datos que se divide en tres partes la primera es tomar informacion de distintas fuentes limpiarla, filtrarla ordenarla y cargarla
+En el primer proceso se extrae la informacion de muchas fuentes como lo son bases de datos
+redes sociales, dispositivos o aplicaciones, despues se pasa al siguiente proceso que es transform donde se pueden
+organizar, limpiar, eliminar duplicados y enriquecerlos. Por ultimo se cargan estos datos a nuestro destino como lo puede ser
+una base de datos o un almacenamiento, concluyendo lo que se quiere con este proceso es hacer todo este ciclo para poder utilizar estos datos
+
+Metodologias Agiles:
+Scrum (Entrenador de equipos):
+Esta metodologia se base en la idea de divide y venceras, pero a su vez es conocida pro ser la metodologia del caos
+donde se basa en un desarrollo incremental, donde se basa en estar regido por entregables revisando estos gracias a su punto clave que son las reuniones
+
+Kanban:
+La estrategia Kanban conocida como tarjeta visual, consiste en la elaboracion de un diagrama o tambien dicho un TO-DO List
+con diferentes columnas en el cual estan las tres columnas de tareas como lo pueden ser por hacer, en proceso y terminadas,
+este cuadro debe ser de conocimiento de todos los integrantes del grupo
+
+Extreme Programming (El perfeccionista): 
+En esta metodologia el nivel al detalle y la calidad es lo primero se basa mucho en desarrollo de software y se utiliza el trabajo por parejas,
+promoviendo la colaboracion entre todos los integrantes
+
+Lean:
+Esta utiliza la ideologia de si no sirve descartalo lo que mas vale es la priorizacion en cada uno de sus elementos haciendo lo mas importante o util al principio
+
+Agile Inception:
+Esta orientada a la definicion de los objetivos generales de las empresas, Su objetivo es clarigicar cuestiones como lo pueden ser el servicio al cliente,
+las formas de ventas, etc. Suele girar entorno al proceso de elevator pitch que consiste en pequenas reuniones entre los socios y el equipo de trabajo
+en estas intervenciones no puede durar mucho tiempo.
