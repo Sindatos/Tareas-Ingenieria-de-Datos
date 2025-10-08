@@ -37,7 +37,7 @@ CREATE TABLE mascota (
     tipo VARCHAR(20),
     genero CHAR(1),
     raza VARCHAR(20),
-    cedula_cliente VARCHAR(20),
+    cedula_cliente VARCHAR(20), #FK
     FOREIGN KEY (cedula_cliente) REFERENCES cliente(cedula)
 );
 
@@ -101,7 +101,7 @@ INSERT INTO cliente VALUES
 ("111", "Ana", "Maria", "Lopez", "Perez", "Calle 1", 1),
 ("112", "Juan", "Carlos", "Martinez", "Diaz", "Calle 2", 2),
 ("113", "Pedro", "Jose", "Gomez", "Ruiz", "Calle 3", 3),
-("114", "Laura", "Camila", "Torres", "Mora", "Calle 4", 4),
+("114", "Juan", "Camila", "Torres", "Mora", "Calle 4", 4),
 ("115", "Sofia", "Isabel", "Ramos", "Cruz", "Calle 5", 5);
 
 INSERT INTO telefono (numero, tipo_telefono, cedula_cliente) VALUES
@@ -114,7 +114,7 @@ INSERT INTO telefono (numero, tipo_telefono, cedula_cliente) VALUES
 -- Insertar en mascota
 INSERT INTO mascota VALUES
 ("M1", "Firulais", "Perro", "M", "Labrador", "111"),
-("M2", "Misu", "Gato", "F", "Persa", "112"),
+("M2", "Firulais", "Gato", "F", "Persa", "112"),
 ("M3", "Rocky", "Perro", "M", "Bulldog", "113"),
 ("M4", "Luna", "Gato", "F", "Siames", "114"),
 ("M5", "Toby", "Perro", "M", "Golden", "115");
@@ -215,7 +215,7 @@ max() -> obtiene el valor maximo
 
 siempre van a devolver un univo valor agrupado
 */
-select departamento, count(*) as "por departamento" from empleados group by departamento;
+#select departamento, count(*) as "por departamento" from empleados group by departamento;
 
 # max y min select max(campo) as NombreAlias from tabla
 
@@ -243,3 +243,77 @@ select avg(precio) as "promedio" from producto;
 create view vistadueno as select cliente.primer_nombre as "nombre cliente",
 mascota.nombre as "Mascota asociada" from cliente join mascota on cliente.cedula = mascota.cedula_cliente;
 select * from vistadueno;
+
+
+/* sintaxis
+delimiter $$ 
+create procedure nombreprocedimiento(parametros)
+begin
+--sentencias logica 
+end $$
+delimiter;
+INVOCAR PROCEDIMIENTO
+CALL nombreProcedimiento(argumentos)
+
+*/ 
+
+
+DELIMITER $$
+
+CREATE PROCEDURE VacunasPorMascota(IN codigoMascota VARCHAR(10))
+BEGIN
+    SELECT m.codigo AS "Código Mascota", m.nombre AS "Nombre Mascota", v.codigo AS "Código Vacuna", v.nombre AS "Nombre Vacuna",  vacunamascota.fecha_aplicacion AS "Fecha de Aplicación"
+    FROM mascota m
+    INNER JOIN vacunamascota ON m.codigo = vacunamascota.codigo_mascota
+    INNER JOIN vacuna v ON vacunamascota.codigo_vacuna = v.codigo
+    WHERE m.codigo = codigoMascota;
+END $$
+
+DELIMITER ;
+
+CALL VacunasPorMascota("M1")
+
+DELIMITER $$
+
+CREATE PROCEDURE ConsultarRegistrarMascotaPorCliente(
+    IN codigo_mascota VARCHAR(10),
+    IN nombre VARCHAR(100),
+    IN tipo VARCHAR(20),
+    IN genero CHAR(1),
+    IN raza VARCHAR(20),
+    IN cedula_cliente VARCHAR(20)
+)
+BEGIN
+    DECLARE cliente_existe VARCHAR(20);
+    DECLARE mascota_existe VARCHAR(10);
+
+    SELECT cedula INTO cliente_existe
+    FROM cliente
+    WHERE cedula = cedula_cliente
+    LIMIT 1;
+
+    SELECT codigo INTO mascota_existe
+    FROM mascota
+    WHERE codigo = codigo_mascota
+    LIMIT 1;
+
+    IF cliente_existe IS NULL THEN
+        SELECT 'No se puede registrar ' AS mensaje;
+
+    ELSEIF mascota_existe IS NOT NULL THEN
+        SELECT 'La mascota ya existe' AS mensaje;
+
+    ELSE
+        INSERT INTO mascota (codigo, nombre, tipo, genero, raza, cedula_cliente)
+        VALUES (codigo_mascota, nombre, tipo, genero, raza, cedula_cliente);
+
+        SELECT 'Mascota registrada' AS mensaje;
+    END IF;
+END $$
+
+DELIMITER ;
+
+/* Funciones UDF
+
+
+*/
