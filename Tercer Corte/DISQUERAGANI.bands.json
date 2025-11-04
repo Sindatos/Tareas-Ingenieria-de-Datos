@@ -1,0 +1,262 @@
+[{
+  "_id": {
+    "$oid": "690a6e863873754eaad3fcd4"
+  },
+  "idband": 1,
+  "name": "Coldplay",
+  "country": "UK",
+  "url": "https://www.coldplay.com/",
+  "albums": [
+    {
+      "title": "Parachutes"
+    },
+    {
+      "title": "A Rush of Blood to the Head",
+      "songs": [
+        {
+          "title": "Politik"
+        },
+        {
+          "title": "In My Place"
+        },
+        {
+          "title": "Clocks"
+        },
+        {
+          "title": "The Scientist"
+        },
+        {
+          "title": "Amsterdam"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "690a71d73873754eaad3fcd5"
+  },
+  "idband": 2,
+  "name": "Daft Punk",
+  "country": "FR",
+  "url": "https://daftpunk.com/",
+  "albums": [
+    {
+      "title": "Discovery",
+      "dateCreated": {
+        "$date": "2001-03-13T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "One More Time"
+        },
+        {
+          "title": "Digital Love"
+        },
+        {
+          "title": "Harder Better Faster Stronger"
+        },
+        {
+          "title": "Something About Us"
+        },
+        {
+          "title": "Face to Face"
+        }
+      ]
+    },
+    {
+      "title": "Random Access Memories",
+      "dateCreated": {
+        "$date": "2013-06-17T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "Giorgio By Moroder"
+        },
+        {
+          "title": "Get Lucky"
+        },
+        {
+          "title": "Lose Yourself to Dance"
+        },
+        {
+          "title": "Contact"
+        },
+        {
+          "title": "Touch"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "690a72863873754eaad3fcd6"
+  },
+  "idband": 3,
+  "name": "AC/DC",
+  "country": "AU",
+  "url": "https://www.acdc.com/",
+  "albums": [
+    {
+      "title": "Highway to Hell",
+      "dateCreated": {
+        "$date": "1979-08-27T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "Highway to Hell"
+        },
+        {
+          "title": "Girls Got Rhythm"
+        },
+        {
+          "title": "Shot Down in Flames"
+        },
+        {
+          "title": "Touch Too Much"
+        },
+        {
+          "title": "Night Prowler"
+        }
+      ]
+    },
+    {
+      "title": "Back in Black",
+      "dateCreated": {
+        "$date": "1980-08-25T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "Hells Bells"
+        },
+        {
+          "title": "Shoot to Thrill"
+        },
+        {
+          "title": "Back in Black"
+        },
+        {
+          "title": "You Shook Me All Night Long"
+        },
+        {
+          "title": "Rock and Roll Ain't Noise Pollution"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "690a72f63873754eaad3fcd7"
+  },
+  "idband": 4,
+  "name": "Depeche Mode",
+  "country": "UK",
+  "url": "https://www.depechemode.com/",
+  "albums": [
+    {
+      "title": "Music for the Masses",
+      "dateCreated": {
+        "$date": "1987-10-28T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "Never Let Me Down Again"
+        },
+        {
+          "title": "Strangelove"
+        },
+        {
+          "title": "Behind the Wheel"
+        },
+        {
+          "title": "The Things You Said"
+        },
+        {
+          "title": "I Want You Now"
+        }
+      ]
+    },
+    {
+      "title": "Violator",
+      "dateCreated": {
+        "$date": "1990-04-19T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "World in My Eyes"
+        },
+        {
+          "title": "Sweetest Perfection"
+        },
+        {
+          "title": "Personal Jesus"
+        },
+        {
+          "title": "Enjoy the Silence"
+        },
+        {
+          "title": "Policy of Truth"
+        }
+      ]
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "690a73fe3873754eaad3fcd8"
+  },
+  "idband": 5,
+  "name": "Red Hot Chili Peppers",
+  "country": "US",
+  "url": "https://redhotchilipeppers.com/",
+  "albums": [
+    {
+      "title": "Blood Sugar Sex Magik",
+      "dateCreated": {
+        "$date": "1991-10-24T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "The Power of Equality"
+        },
+        {
+          "title": "Give It Away"
+        },
+        {
+          "title": "Under the Bridge"
+        },
+        {
+          "title": "Suck My Kiss"
+        },
+        {
+          "title": "Breaking the Girl"
+        }
+      ]
+    },
+    {
+      "title": "Californication",
+      "dateCreated": {
+        "$date": "1999-07-08T05:00:00.000Z"
+      },
+      "songs": [
+        {
+          "title": "Around the World"
+        },
+        {
+          "title": "Parallel Universe"
+        },
+        {
+          "title": "Scar Tissue"
+        },
+        {
+          "title": "Californication"
+        },
+        {
+          "title": "Otherside"
+        }
+      ]
+    }
+  ]
+}]
